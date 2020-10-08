@@ -4,7 +4,7 @@
 
 .app {
   background-color: #f7f7f7;
-  height: 100vh;
+  height: 100%;
 }
 
 .app__header {
@@ -12,9 +12,35 @@
   background-color: white;
   padding: 20px;
   border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .app__headerImage {
   width: 110px;
   background-color: white;
+}
+
+.app__posts {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.app__postsRight {
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .app__postsRight {
+    display: none;
+  }
+}
+
+.app__signup {
+  display: flex;
+  flex-direction: column;
 }
